@@ -1,0 +1,43 @@
+{
+  "tools": [
+    {
+      "name": "Fivetran",
+      "url": "https://fivetran.com/dashboard",
+      "connections": [
+        { "id": "conn_1", "name": "Connection 1", "label": "Production DB" },
+        { "id": "conn_2", "name": "Connection 2", "label": "Analytics DB" },
+        { "id": "conn_3", "name": "Connection 3", "label": "Marketing DB" },
+        { "id": "conn_4", "name": "Connection 4", "label": "Sales DB" },
+        { "id": "conn_5", "name": "Connection 5", "label": "Finance DB" }
+      ],
+      "tabs_to_capture": ["Users", "Teams"]
+    },
+    {
+      "name": "Snowflake",
+      "url": "https://app.snowflake.com",
+      "connections": [
+        { "id": "sf_1", "name": "PROD_WAREHOUSE", "label": "Production" },
+        { "id": "sf_2", "name": "DEV_WAREHOUSE", "label": "Development" }
+      ],
+      "tabs_to_capture": ["Users", "Roles"]
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com",
+      "connections": [
+        { "id": "gh_1", "name": "org/repo-1", "label": "Main Repo" },
+        { "id": "gh_2", "name": "org/repo-2", "label": "Data Pipelines" }
+      ],
+      "tabs_to_capture": ["Collaborators", "Teams"]
+    }
+  ],
+  "output": {
+    "excel_template": "src/excel/control_document_template.xlsx",
+    "archive_folder": "outputs/archives",
+    "report_name_format": "AuditPilot_ControlDoc_{YYYY}_{MM}.xlsx"
+  },
+  "notifications": {
+    "email_recipients": ["compliance@yourcompany.com"],
+    "email_subject": "Monthly Access Control Report — {MONTH} {YEAR}"
+  }
+}
