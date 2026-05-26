@@ -1,0 +1,21 @@
+# Credentials & secrets
+config/connections.json
+*.env
+.env*
+
+# Screenshots (generated at runtime)
+screenshots/
+outputs/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# UiPath
+*.xaml.bak
+.uipath/
+
+# OS
+.DS_Store
+Thumbs.db
