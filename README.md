@@ -37,7 +37,7 @@ What used to take hours now runs in **minutes — fully automated, every month.*
 ---
 
 ## 🏗️ Architecture
-
+![AuditPilot BPMN Flow](docs/bpmn_flow.svg)
 ```
 [Monthly Scheduler / On-Demand Trigger]
               ↓
